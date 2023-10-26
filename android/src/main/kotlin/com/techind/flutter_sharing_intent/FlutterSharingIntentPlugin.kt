@@ -113,17 +113,17 @@ class FlutterSharingIntentPlugin: FlutterPlugin, ActivityAware, MethodCallHandle
         eventSinkSharing?.success(value?.toString())
 
       }
-      intent.action == Intent.ACTION_VIEW -> { // Opening URL
-        val value = JSONArray().put(
-          JSONObject()
-            .put("value", intent.dataString)
-            .put("type", MediaType.URL.ordinal)
-        )
-        if (initial) initialSharing = value
-        latestSharing = value
-        Log.w(TAG,"handleIntent ==>> $value")
-        eventSinkSharing?.success(value?.toString())
-      }
+//      intent.action == Intent.ACTION_VIEW -> { // Opening URL
+//        val value = JSONArray().put(
+//          JSONObject()
+//            .put("value", intent.dataString)
+//            .put("type", MediaType.URL.ordinal)
+//        )
+//        if (initial) initialSharing = value
+//        latestSharing = value
+//        Log.w(TAG,"handleIntent ==>> $value")
+//        eventSinkSharing?.success(value?.toString())
+//      }
     }
   }
 
